@@ -28,10 +28,26 @@
 <p>Text or call someone you trust</p>
 <p>Touch grass</p>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel"> Divined Message ✨</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="affirmation-message"></p> <!-- Affirmation will show up here -->
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="button-container">
 <button class = "button-message" onclick= "buttonClick()"> Toxic Motivation </button>
-<button class = "button-message" onclick = "buttonClick()"> Positive Message </button>
+<button type="button" class="button-message" id = "positive-message" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Positive Message
+</button>
 <button> <a href = "help.html" > Seek Professional Help </a> </button>
 </div>
 <script src = "script.js"> </script>

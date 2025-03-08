@@ -84,3 +84,7 @@ a {
     text-decoration: none;
     color: #264653;
 }
+
+.modal-content{
+    background-color: azure;
+}
