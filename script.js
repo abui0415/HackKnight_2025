@@ -1,7 +1,3 @@
-function buttonClick() {
-    
-}
-
 function updateStreak() {
     let streak = parseInt(localStorage.getItem("streak")) || 0;
     let lastCheckIn = localStorage.getItem("lastCheckIn");
@@ -81,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showNeedsSection() {
-        mainContent.innerHTML = "<h1>What do you need?</h1>";
+        mainContent.innerHTML = "<h1>Goals of the Day</h1>";
         mainContent.style.opacity = "1";
 
         displayRandomGoals();
@@ -164,3 +160,19 @@ function randomAffirm(results) {
     modal.hide(); // Hide the modal
     modal.show(); // Show the modal again with the updated content
 }
+
+   // Event listener for dropdown items
+   document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function(event) {
+        // Get the audio file from data attribute
+        const audioFile = event.target.getAttribute('data-audio');
+        
+        // Set the source for the audio player
+        const audioSource = document.getElementById('audioSource');
+        audioSource.src = audioFile;
+
+        // Get the audio element and play the audio
+        const audioPlayer = document.getElementById('audioPlayer');
+        audioPlayer.load();  // Reloads the audio source
+        audioPlayer.play();  // Plays the audio
+    })});
