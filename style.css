@@ -1,40 +1,86 @@
-body{
-    background: url("images/clouds.png"), rgba(168, 218, 220, 0.5);
-    background-blend-mode: overlay ;
-    color: #264653;
-    text-align: center;
-    background-size:cover;
+body {
+    background: url("images/clouds.png");
+    background-color: rgba(168, 218, 220, 0.5); /* Ensure opacity is valid */
+    background-blend-mode: overlay;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    color: #264653;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-p{
-    color: blue;
+/* Streak Display - Top Right */
+#streakDisplay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-img{
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mood Container */
+.mood-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+img {
     width: 10%;
     transition: ease-in 0.5s;
 }
-img:hover{
+
+img:hover {
     transform: scale(1.2);
 }
-button{
+
+/* Goal Container */
+.goal-container {
+    margin-top: 20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+button {
     font-size: 15px;
     border-radius: 12px;
     border-style: none;
-    color:#264653;
+    color: #264653;
+    background-color: #A8DADC;
     padding: 10px;
-    margin: 10px;
     transition: ease-in 0.5s;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.2);
 }
 
-a{
+/* Link Styling */
+a {
     text-decoration: none;
     color: #264653;
-  
 }
