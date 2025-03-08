@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel = "stylesheet" href = "style.css">
 </head>
-<body>
-<a href = "index.html"> home </a>
-<h1> Professional Resources </h1>
+<body class = "help-content">
 
+<nav class="navbar navbar-expand-lg bg-body-transparent fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a href = "index.html"> Home </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<div class ="resources-container">
+    <h1> - Professional Resources - </h1>
 <details>
     <summary> Apps </summary>
-    <h2> <a href = "https://apps.apple.com/us/app/talkspace-therapy-and-support/id661829386" > Talkspace (free under 18) </a></h2>
+    <h2> <a href = "https://apps.apple.com/us/app/talkspace-therapy-and-support/id661829386" > Talkspace </a></h2>
+    <p> Free under 18 </p>
     <p> Talkspace is the most convenient and affordable way to improve your mental health. Get matched with a licensed therapist in 
         your state from the comfort of your device, and message via text, audio, and video.</p>
     <h2> <a href = "https://apps.apple.com/us/app/betterhelp-therapy/id995252384" > BetterHelp - Therapy </a> </h2>
+    <p> $65-100/wk </p>
     <p> BetterHelp is the convenient way to get professional help from a licensed therapist. With over 30,000 trained, experienced, 
         and accredited therapists covering a wide range of areas – from depression and anxiety to family and couples therapy – 
         it’s never been easier to receive personal, professional help when you need it.</p>
     <h2> <a href = "https://apps.apple.com/us/app/cerebral-mental-health/id1537193671" > Cerebral </a></h2>
+    <p> $95-365/month </p>
     <p> Cerebral’s national network of licensed and credentialed mental health care doctors and therapists offer 
         one-on-one personalized professional mental health care that will get you feeling better. Working directly 
         with your doctors and therapists can help you overcome your anxiety, depression, insomnia, and more, managing 
@@ -24,17 +45,20 @@
         schedule your visits, and have a direct one-on-one telehealth visit with your selected healthcare professional.</p>
 </details>
 
-<h2> Help By Boroughs </h2>
+<h2> 🌃Help By Boroughs </h2>
 
 <details>
     <summary> Queens </summary>
     <h2> <a href = "https://www.aafe.org/missions/community-services/" > Asian Americans for Equality </a> </h2>
+    <p> Free (includes legal counseling) </p>
     <p> Counseling services and programs for low-income tenants, immigrants, older adults and youth. </p>
     <h2> <a href = "http://libertascenter.net/" > Libertas Center </a> </h2>
+    <p> Free </p>
     <p> The Libertas Center places torture survivors and their communities at the center of our
          work, taking guidance from them and recognizing their great capacity for resilience.</p>
     <h2> <a href = "https://www.stjohns.edu/academics/centers-institutes/center-psychological-services" > 
         Center for Psychological Services at St. John's University</a> </h2>
+        <p> Price will vary </p>
     <p> The St. John’s University Center for Psychological Services was established in 1986 with the dual mission of 
         providing psychological services to community residents and training opportunities for graduate psychology 
         students in the University’s Clinical and School Psychology programs.</p>
@@ -43,15 +67,18 @@
 <details>
     <summary> Manhattan </summary>
     <h2> <a href = "https://steinhardt.nyu.edu/center-counseling-and-community-wellbeing" > Center for Counseling and Community Wellbeing </a> </h2>
+    <p> $20-40 per session </p>
     <p> The Center is part of the teaching and training program in Counseling Psychology and 
         provides services to meet the social, emotional, and behavioral health of the local community. 
         We provide a range of services to children, adolescents, adults, and families.</p>
     <h2> <a href = "https://ccmnyc.org/" > </a> Community Counseling and Mediation </h2>
+    <p> $35 per session </p>
     <p> Community Counseling & Mediation (CCM) works in underserved Brooklyn communities 
         and with at-risk New York City populations to address the root causes of family instability, complex trauma, 
         homelessness, and unhealthy personal choices. Our singular goal is to help every person and family we touch to
          live their best life and achieve their optimal wellbeing.</p>
     <h2> <a href = "https://www.acmhnyc.org/programs/" > </a> Garden House Respite </h2>
+    <p> Free (Short term stay during psychiatric crisis) </p>
     <p> ACMH enables adults to develop skills and access treatment, services and supports in the community in order to 
         attain goals important to them. ACMH serves more than 1,500 individuals and households daily through various programs</p>
 </details>
@@ -59,26 +86,26 @@
 <details>
     <summary> Brooklyn </summary>
     <h2> <a ref = "https://www.ohelfamily.org/" > </a> OHEL Children's Home and Family Services </h2>
+    <p> Prices may vary </p>
     <p> Since 1969, Ohel has provided a critical safety net of support and hope.
         Mental health counseling and residences. Older adult care. Residences and programs for individuals with 
         developmental disabilities. Foster care placement. Trauma and bereavement services. 
         Shelter for victims of domestic violence.</p>
-    <h2> <a href = "https://onebrooklynhealth.org/services/psychiatry-behavioral-health" > </a> One Brooklyn Health </h2>
-    <p> OBH provides a comprehensive continuum of mental health and substance abuse services that include both 
-        in-patient and ambulatory services with varying levels of intensity to meet the needs of our community. 
-        In addition, our treatment programs meet the needs of dual-diagnosis patients with mental illness and 
-        substance abuse disorders.<p>
-    <h2> <a href = "https://newdirectionsbrooklyn.com/" > </a> Brooklyn Center for PsychoTherapy </h2>
-    <p> Here at Brooklyn Center for Psychotherapy, we provide a warm atmosphere with a wide array of mental health services. 
-        No matter your age, cultural, or religious background, you’ll feel at home with us. Our dedicated staff, including doctors, 
-        nurse practitioners, therapists, and mental health professionals understand that mental health must be treated.  
-        With over 70 years of successful treatment and outcomes, our mental health providers understand how to work with 
-        patients of all ages, ethnicities and backgrounds.</p>
+    <h2> <a href = "https://sco.org/" > </a> SCO Family of Services </h2>
+    <p> Free for eligible individuals </p>
+    <p> SCO Family of Services delivers vital human services to children, families, adults, and the community to provide 
+        them with the necessary tools to achieve success.p>
+    <h2> <a href = "https://bmhmindandbody.com/" > </a> Beverly Mack Harry Consulting Services </h2>
+    <p> Prices may vary </p>
+    <p> We are equally committed to providing the highest quality of service to our clients as well as our employees. 
+        Intrinsic in all of our professional practices is the idea that each client is an individual with goals and dreams 
+        that incorporate their cultural beliefs. This idea must be the light that we must embrace and hold true.</p>
 </details>
 
 <details>
     <summary> Bronx </summary>
     <h2> <a href = "https://www.yu.edu/ferkauf/parnes-clinic" > </a> Ferkauf Graduate School of Psychology Parnes Clinic </h2>
+    <p> $5-40 per session </p>
     <p> he Max and Celia Parnes Family Psychological and Psychoeducational Services Clinic provides a variety of psychological 
         services to individuals and their families, both in the Bronx and the Greater New York City communities. 
         We are also the teaching and training center of the Ferkauf Graduate School of Psychology of Yeshiva University. 
@@ -86,9 +113,11 @@
         providing a wide range of supervised state-of-the-art therapies to a broad-based population, especially those who 
         cannot otherwise afford or access these services within the community.</p>
     <h2> <a href = "https://www.fordham.edu/academics/departments/psychology/graduate-program/phd-in-clinical-psychology/fordham-community-mental-health-clinic/" > </a> Fordham Community Mental Health Clinic </h2>
+    <p> Prices may vary </p>
     <p> The Fordham Community Mental Health Clinic (FCMHC) provides comprehensive psychological services to the Bronx community at a 
         modest cost while serving as a training and research site for clinical psychology doctoral students.</p>
     <h2> <a href = "https://www.nychealthandhospitals.org/north-central-bronx/services/behavioral-health/" > </a> North Central Bronx Hospital: Behavioral Health Services </h2>
+    <p> $20 per session </p>
     <p> NYC Health + Hospitals/North Central Bronx’s Behavioral Health Services include inpatient psychiatric care, 
         addiction treatment, and outpatient emotional and mental health services for children, adolescents, adults, and seniors.</p>
 </details>
@@ -96,14 +125,17 @@
 <details>
     <summary> Staten Island </summary>
     <h2> <a href = "https://www.pridecentersi.org/counseling" > </a> The Staten Island LGBT Center </h2>
+    <p> Free </p>
     <p> Behavioral Health Services at the Pride Center of Staten Island provide a supportive and confidential setting for the 
         emotional, psychological, and social needs of the LGBTQIA+ community and their families across the lifespan. 
         All Behavioral Health Services are FREE, confidential, and tailored to the individual. LGBTQIA+ individuals, 
         couples, and families qualify for services</p>
     <h2> <a href = "https://ymcanyc.org/locations/counseling-service" > </a> YMCA Counseling Service </h2>
+    <p> $20 per session </p>
     <p> Reclaim your life from addiction. The Staten Island YMCA Counseling Service has adult, teen, youth, and family programs 
         for those struggling with substance use and their families. Virtual and in-person services available. Call to speak with 
         someone today. </p>
 </details>
+</div>
 </body>
 </html>
