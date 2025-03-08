@@ -1,17 +1,41 @@
-function buttonClick() {
-    
-}
+document.addEventListener("DOMContentLoaded", function () {
+    let savedStreak = localStorage.getItem("streak") || 0;
+    document.getElementById("streakDisplay").innerText = `Streak: ${savedStreak}`;
 
-function updateStreak() {
-    let streak = parseInt(localStorage.getItem("streak")) || 0;
-    let lastCheckIn = localStorage.getItem("lastCheckIn");
-
+    let lastCheckIn = localStorage.getItem("lastCheckIn"); // ⬅️ Move this up
     const today = new Date().toDateString();
 
+    let moodImages = document.querySelectorAll(".mood");
+    let mainContent = document.querySelector(".main-content");
+    let goalSection = document.querySelector(".goal-container");
+    let buttonContainer = document.querySelector(".button-container");
+
+    // Initially hide the goals and buttons
+    goalSection.style.display = "none";
+    buttonContainer.style.display = "none";
+
     if (lastCheckIn === today) {
-        alert("You've already checked in today!");
-        return;
+        // If the user has already checked in, skip to the goals section
+        showNeedsSection();
+    } else {
+        // Otherwise, show the mood check-in
+        moodImages.forEach(img => {
+            img.addEventListener("click", function () {
+                updateStreak();
+                transitionToNeeds();
+            });
+        });
     }
+
+    function updateStreak() {
+        let streak = parseInt(localStorage.getItem("streak")) || 0;
+        let lastCheckIn = localStorage.getItem("lastCheckIn"); // Retrieve again in case of updates
+        const today = new Date().toDateString();
+
+        if (lastCheckIn === today) {
+            alert("You've already checked in today!");
+            return;
+        }
 
     // Increase the streak
     streak++;
@@ -21,14 +45,14 @@ function updateStreak() {
     localStorage.setItem("lastCheckIn", today);
 
     // Update UI
-    document.getElementById("streakDisplay").innerText = `⭐Streak: ${streak}`;
+    document.getElementById("streakDisplay").innerText = `${streak}`;
 
     alert(`Check-in completed! ${streak} days of being super`);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     let savedStreak = localStorage.getItem("streak") || 0;
-    document.getElementById("streakDisplay").innerText = `⭐Streak: ${savedStreak}`;
+    document.getElementById("streakDisplay").innerText = `Streak: ${savedStreak}`;
 
     let moodImages = document.querySelectorAll(".mood");
 
@@ -38,42 +62,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Affirmations
-const affirmations = document.getElementById("affirmation-message");
-const positiveMessageButton = document.getElementById("positive-message");
-let affirmationsList = []; // Declare the affirmations list here
-
-// Load affirmations when the page is first loaded
-document.addEventListener("DOMContentLoaded", () => {
-    fetch("Affirmations.txt")
-        .then(response => response.text())
-        .then(data => {
-            affirmationsList = data.split(/\r?\n/); // Store affirmations globally
-        })
-        .catch(err => console.log("Error reading the file:", err)); // Handle any fetch errors
-});
-
-// Handle button click for random affirmation
-positiveMessageButton.addEventListener("click", () => {
-    if (affirmationsList.length > 0) {
-        randomAffirm(affirmationsList); // Randomize and show new affirmation
-    } else {
-        console.log("Affirmations not loaded yet!");
-    }
-});
-
-function randomAffirm(results) {
-    let affirmationIndex = Math.floor(Math.random() * results.length); // Get random index
-    const chosenAffirmation = results[affirmationIndex]; // Get the affirmation at that index
-    console.log(chosenAffirmation); // Log to check
-
-    // Ensure the modal content is updated with the new affirmation
-    affirmations.innerText = chosenAffirmation; // Display the affirmation in the modal
-    
-    // Open the modal programmatically
-    let modal = new bootstrap.Modal(document.getElementById("exampleModal"));
-    
-    // To ensure the modal shows the updated content each time, we hide and show it
-    modal.hide(); // Hide the modal
-    modal.show(); // Show the modal again with the updated content
-}
