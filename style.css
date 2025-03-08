@@ -156,9 +156,27 @@ a {
  padding:5%;
 }
 details{
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     padding: 20px;
+}
+.resources-container h1,h3{
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav{
     font-size: 20px;
 }
+
+.contents{
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+}
+
