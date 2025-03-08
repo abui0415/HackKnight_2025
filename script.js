@@ -1,7 +1,3 @@
-function buttonClick() {
-    
-}
-
 function updateStreak() {
     let streak = parseInt(localStorage.getItem("streak")) || 0;
     let lastCheckIn = localStorage.getItem("lastCheckIn");
@@ -81,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showNeedsSection() {
-        mainContent.innerHTML = "<h1>What do you need?</h1>";
+        mainContent.innerHTML = "<h1>Goals of the Day</h1>";
         mainContent.style.opacity = "1";
 
         displayRandomGoals();
