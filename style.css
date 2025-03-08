@@ -1,5 +1,6 @@
 body{
     background: url("images/clouds.png"), rgba(168, 218, 220, 0.5);
+    background-blend-mode: overlay ;
     color: #264653;
     text-align: center;
     background-size:cover;
@@ -9,7 +10,6 @@ body{
 
 p{
     color: blue;
-
 }
 
 img{
