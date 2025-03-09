@@ -1,38 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "style.css">
+    <title>Meditation Reccomendations</title>
+
+    <style>
+        /* Styling for the main wrapper */
+        .wrapper {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Styling for the titles */
+        .titles {
+            text-align: left;
+        }
+
+        /* Styling for the scroll container to allow horizontal scrolling */
+        .scroll {
+            display: flex;
+            overflow-x: auto;  /* Allow horizontal scrolling */
+            gap: 20px;  /* Space between the images and text */
+            padding-bottom: 10px;  /* Padding for the container */
+        }
+
+        /* Each image wrapper containing text above and below */
+        .image-wrapper {
+            flex-direction: column;  /* Stack text and image vertically */
+            align-items: center;  /* Center the text and image */
+            width: 300px;  /* Fixed width for each image wrapper */
+        }
+
+        /* Styling for the image */
+        .image-wrapper img {
+            width: 50%;  /* Image takes up full width of the wrapper */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Styling for the text above the image */
+        .text-top {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .text-bottom {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+    </style>
+<a href = "index.html"> home </a>
 </head>
 
 <body>
-<a href = "index.html"> Home </a>
-<tea>
-<h1> Meditative Audios </h1>
+    <h1> Meditation Reccomendations </h1>
+    <div class="titles">
 
-<div class="tea-container">
-    <h2>Mindful Drinks?</h2>
-    <h3>For Better Sleep: </h3> <br>
-        <img class="sleep" src = "images/tea.png"  alt ="Valerian root tea"/>
-        <p>Valerian root tea</p>
-        <img class="sleep"src = "images/tea.png"  alt ="Chamomile tea"/>
-        <img class="sleep"src = "images/tea.png"   alt ="Lemon balm tea"/> <br>
-    <h3>For Stress Relief: </h3> <br>
-        <img class="stress"src = "images/tea.png"   alt ="Earl gray tea"/>
-        <img class="stress"src = "images/tea.png"   alt ="Passionflower tea"/>
-        <img class="stress"src = "images/tea.png"   alt ="Lavendar tea"/><br>
-    <h3>For Strengthening Focus: </h3> <br>
-        <img class="strengthening"src = "images/tea.png"   alt ="Golden monkey black tea"/>
-        <img class="strengthening"src = "images/tea.png"   alt ="Peppermint tea"/>
-        <img class="strengthening"src = "images/tea.png"   alt ="Matcha green tea"/><br>
-    <h3>For Boosting Mood: </h3> <br>        
-    <img class="mood-boosting"src = "images/tea.png"   alt ="Ginseng tea"/>
-        <img class="mood-boosting"src = "images/tea.png"   alt ="Blooming flower tea"/>
-        <img class="mood-boosting"src = "images/tea.png"   alt ="White tea"/><br>
-    <br>
-   
-    <h2>Yoga Routines:</h2>
+    <h2>Meditation Audios</h2>
+    <div class="wrapper">
+        <!-- Side scrolling container for images with text -->
+        <div class="scroll">
+            <!-- Image wrapper 1 -->
+            <div class="image-wrapper">
+                <div class="text-top">Meditation</div>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1DWZqd5JICZI0u?si=rEAqRgxTQsi6AQvqllq_RA&pi=6t3HxgUIRFeI5" class="image-wrapper"></a>
+                <img src="images/music.png" alt="Meditation">
+            </div>
 
+            <!-- Image wrapper 2 -->
+            <div class="image-wrapper">
+                <div class="text-top">Green Noise</div>
+                <a href="https://open.spotify.com/album/6YhwixAgPGLLs7549j0wZU?si=d532d4fc2288483c " class="image-wrapper"></a>
+                <img src="images/music.png" alt="Green Noise">
+            </div>
 
+            <!-- Image wrapper 3 -->
+            <div class="image-wrapper">
+                <div class="text-top">Ambient Noise</div>
+                <a href="https://open.spotify.com/playlist/2yyLj6iA2UujesJMHHkYiA?si=Mo4LqMRWThSr-qMHcAasgQ&pi=LRBmsakZTcyDu" class="image-wrapper"></a>
+                <img src="images/music.png" alt="Ambient Noise">
+            </div>
+
+            <!-- Image wrapper 4 -->
+            <div class="image-wrapper">
+                <div class="text-top">Nature Noises</div>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1DX4PP3DA4J0N8?si=mLKPpFB8S2K9_1csd2GMkQ&pi=h6Se9voLRwy4x" class="image-wrapper"></a>
+                <img src="images/music.png" alt="Nature Noises">
+            </div>
+        </div>
+    </div>
+
+    <h2>Mindful Drinks</h2>
+    <div class="scroll-container">
+        <img src="images/tea.png" alt="Valerian root">
+        <img src="images/tea.png" alt="Chamomile">
+        <img src="images/tea.png" alt="Lemon balm">
+        <img src="images/tea.png" alt="Earl grey">
+        <img src="images/tea.png" alt="Passionflower">
+        <img src="images/tea.png" alt="Lavendar">
+        <img src="images/tea.png" alt="Golden monket black">
+        <img src="images/tea.png" alt="Peppermint">
+        <img src="images/tea.png" alt="Matcha green">
+        <img src="images/tea.png" alt="Ginseng">
+        <img src="images/tea.png" alt="Blooming flower">
+        <img src="images/tea.png" alt="White">
+
+      </div>
+               
+    <h2>Yoga Routines</h2>
 
 </body>
 </html>

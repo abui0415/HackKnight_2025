@@ -127,6 +127,7 @@ img {
     justify-content: center;
     gap: 10px; /* Adjust spacing between buttons */
     margin-top: 10px; /* Ensures buttons are right below goals */
+    margin-bottom: 100px 
 }
 /* Button Styling */
 button {
@@ -177,10 +178,67 @@ nav{
     font-size: 20px;
 }
 
-/* Tea Container */
-.tea-container {
-    line-height: 10px;
-    text-align: left;
-    gap: 5px;
-    margin-left: 10px;
+/* Basic reset for padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Container that holds the scrolling content */
+.scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* The scrolling content that moves horizontally */
+.scrolling-content {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+/* Style for each image and its corresponding text */
+.image-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.image-text img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.image-text p {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}
+
+/* Keyframe animation to scroll the images */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+div.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    width: 80%;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+    width: 10%;
+    height: 80%;
+  }
