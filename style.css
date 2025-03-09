@@ -143,7 +143,7 @@ button {
 }
 
 button:hover {
-    transform: scale(1.2);
+   border:1px solid #264653;
 }
 
 /* Link Styling */
