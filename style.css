@@ -51,6 +51,10 @@ h3{
     text-align: center;
 }
 
+.main-content h1{
+    margin-top: 15%;
+}
+
 /* Mood Container */
 .mood-container {
     display: flex;
@@ -249,3 +253,27 @@ div.scroll-container {
     width: 10%;
     height: 80%;
   }
+.contents{
+        display: flex;
+        margin-top: 10%;
+        justify-content: space-between; /* Align children with space between */
+        gap: 20px; /* Optional: Add some space between the input box and the side box */
+}
+  .sidebox-left, .assignment-box{
+    width: 25%; /* You can adjust this based on your layout needs */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height:fit-content;
+  }
+  .articles-box{
+    width: 35%; /* You can adjust this based on your layout needs */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height:fit-content;
+  }
+
+

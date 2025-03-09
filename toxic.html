@@ -2,6 +2,7 @@
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.0.0/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "style.css">
@@ -17,31 +18,75 @@
         <span id="streakDisplay" class="fw-bold">0</span>
     </nav>
 
-<div class="container-fluid">
+<div class="main-content">
 <h1> - Toxic Motivation - </h1>
 <div class = "contents" >
-<div class="dropdown">
-    <h3>Need motivation?</h3>
-    <p> Choose a voice </p>
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Voices
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#" data-audio="https://dl.dropboxusercontent.com/s/agjux3xoi3fpgt8/White_Man.mp3"> Male </a></li>
-      <li><a class="dropdown-item" href="#" data-audio = "https://dl.dropboxusercontent.com/s/3vg3z2sblrl1ofl/Indian.mp3"> Female </a></li>
-    </ul>
-</div>
+    <audio id="background-audio" autoplay loop>
+        <source src="./audios/Circus.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-<h3>Input 3 assignments and a set time:</h3>
-<h3> Motivating articles </h3>
-    <p> <a href = "https://www.cbsnews.com/newyork/news/12-year-old-high-school-senior-long-island/" > 12 y/o NYU Student </a></p>
-    <p> <a href = "https://fortune.com/europe/2025/02/11/entrepreneur-steven-wang-dropped-out-harvard-17-million-brokerage-dub-trading/" > 23 y/o Serial Entrepreneur </a></p>
-    <p> <a href = "https://www.scmp.com/yp/discover/news/global/article/3106582/coronavirus-us-teenager-wins-prize-discovery-potentially" > 14 y/o Discovers Potential Covid-19 Cure </a></p>
-    <p> <a href = "https://sarajevotimes.com/child-prodigy-conquers-the-art-world-with-his-work/" > Child Prodigy Conquers Art World </a></p>
-    <p> <a href = "https://www.linkedin.com/in/rashadlandrum/" > Rashad Landrum LinkedIn </a></p>
+      <form class = "assignment-box">
+        <h3> Set your own assignments </h3>
+        <div class="mb-3">
+          <label for="assignInput1" class="form-label"> Assignment 1 </label>
+          <input type="text" class="form-control" id="assignInput1" aria-describedby="assign1">
+        </div>
+        <div class="mb-3">
+            <label for="timeInput" class="form-label">Set Time</label>
+            <input type="time" class="form-control" id="timeInput">
+        </div>
+        <div class="mb-3">
+            <label for="assignInput2" class="form-label"> Assignment 2 </label>
+            <input type="text" class="form-control" id="assignInput2" aria-describedby="assign2">
+          </div>
+          <div class="mb-3">
+            <label for="timeInput" class="form-label">Set Time</label>
+            <input type="time" class="form-control" id="timeInput">
+        </div>
+          <div class="mb-3">
+            <label for="assignInput3" class="form-label"> Assignment 3 </label>
+            <input type="text" class="form-control" id="assignInput3" aria-describedby="assign3">
+          </div>
+          <div class="mb-3">
+            <label for="timeInput" class="form-label">Set Time</label>
+            <input type="time" class="form-control" id="timeInput">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    <div class = "sidebox-left" >
+        <div class="dropdown">
+            <h3>Need motivation?</h3>
+            <p> Choose a voice </p>
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Voices
+            </button>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-audio="https://dl.dropboxusercontent.com/s/agjux3xoi3fpgt8/White_Man.mp3"> Male </a></li>
+            <li><a class="dropdown-item" href="#" data-audio = "https://dl.dropboxusercontent.com/s/3vg3z2sblrl1ofl/Indian.mp3"> Female </a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class = "articles-box">
+    <h3> Motivating articles </h3>
+    <div>
+        <u1>
+        <li> <a href = "https://www.cbsnews.com/newyork/news/12-year-old-high-school-senior-long-island/" > 12 y/o NYU Student </a></li>
+        <li> <a href = "https://fortune.com/europe/2025/02/11/entrepreneur-steven-wang-dropped-out-harvard-17-million-brokerage-dub-trading/" > 23 y/o Serial Entrepreneur </a></li>
+        <li> <a href = "https://www.scmp.com/yp/discover/news/global/article/3106582/coronavirus-us-teenager-wins-prize-discovery-potentially" > 14 y/o Discovers Potential Covid-19 Cure </a></li>
+        <li> <a href = "https://sarajevotimes.com/child-prodigy-conquers-the-art-world-with-his-work/" > Child Prodigy Conquers Art World </a></li>
+        <li> <a href = "https://www.linkedin.com/in/rashadlandrum/" > Rashad Landrum LinkedIn </a></li>
+    </u1>
+        </div>
+    </div>
 </div>
 </div>
-<script src = "script.js"> </script>
+<script src = "scriptaudio.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.0.0/js/tempusdominus-bootstrap-4.min.js"></script>
+
 </body>
 </html>
