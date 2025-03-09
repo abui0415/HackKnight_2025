@@ -273,8 +273,6 @@ div.scroll-container {
     height:fit-content;
   }
 
-
-
 /* Styling for the main wrapper */
 .wrapper {
 text-align: center;
@@ -283,7 +281,10 @@ margin: 20px;
 
 /* Styling for the titles */
 .titles {
-text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Styling for the scroll container to allow horizontal scrolling */
