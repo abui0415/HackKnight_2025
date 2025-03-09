@@ -1,3 +1,4 @@
+localStorage.removeItem("streak");
 document.addEventListener('DOMContentLoaded', () => {
     // Toxic voice audios
     document.querySelectorAll('.dropdown-item').forEach(item => {
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Background Clown Music
     var backgroundAudio = document.getElementById('background-audio');
-    backgroundAudio.volume = 0.1;
+    backgroundAudio.volume = 0.2;
     backgroundAudio.loop = true; // Ensure background audio is looping
 
     // Check if the background music should play after page reload
