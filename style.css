@@ -47,7 +47,6 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh; /* Reduced from 100vh */
     text-align: center;
 }
 
@@ -86,7 +85,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: -40px; /* Further reduces space between title and goals */
+    margin-top: 18px;
 }
 
 .goal-card {
@@ -273,8 +272,6 @@ div.scroll-container {
     height:fit-content;
   }
 
-
-
 /* Styling for the main wrapper */
 .wrapper {
 text-align: center;
@@ -283,7 +280,10 @@ margin: 20px;
 
 /* Styling for the titles */
 .titles {
-text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Styling for the scroll container to allow horizontal scrolling */
