@@ -1,4 +1,3 @@
-localStorage.removeItem("streak");
 document.addEventListener('DOMContentLoaded', () => {
     // Toxic voice audios
     document.querySelectorAll('.dropdown-item').forEach(item => {

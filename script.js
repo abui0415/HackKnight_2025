@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         streak++;
         localStorage.setItem("streak", streak);
         localStorage.setItem("lastCheckIn", today);
-        document.getElementById("streakDisplay").innerText = `Streak: ${streak}`;
+        document.getElementById("streakDisplay").innerText = `⭐Streak: ${streak}`;
     }
 
     function transitionToNeeds() {
