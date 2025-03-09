@@ -177,10 +177,10 @@ nav{
     font-size: 20px;
 }
 
-/* Tea Container */
-.tea-container {
-    line-height: 10px;
-    text-align: left;
-    gap: 5px;
-    margin-left: 10px;
+.contents{
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
 }
