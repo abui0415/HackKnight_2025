@@ -251,6 +251,10 @@ div.scroll-container {
         margin-top: 10%;
         justify-content: space-between; /* Align children with space between */
         gap: 20px; /* Optional: Add some space between the input box and the side box */
+        font-family: "Red Hat Text", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
 }
   .sidebox-left, .assignment-box{
     width: 25%; /* You can adjust this based on your layout needs */
