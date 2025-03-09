@@ -1,3 +1,39 @@
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent page refresh
+            let audioSrc = this.getAttribute('data-audio');
+            console.log('Audio source:', audioSrc); // Debugging the link
+
+            if (audioSrc) {
+                // Remove existing audio players before adding a new one
+                document.querySelectorAll('audio').forEach(audio => audio.remove());
+
+                let audioPlayer = document.createElement('audio');
+                audioPlayer.controls = true;
+                audioPlayer.src = audioSrc;
+
+                // Add event listener to check for errors
+                audioPlayer.addEventListener('error', (e) => {
+                    console.error('Audio error:', e);
+                });
+
+                // Append the audio player after the dropdown menu
+                this.parentElement.appendChild(audioPlayer);
+
+                // Auto-play the audio
+                audioPlayer.play().then(() => {
+                    console.log('Audio is playing!');
+                }).catch((error) => {
+                    console.error('Audio failed to play:', error);
+                });
+            } else {
+                console.log('No audio source available.');
+            }
+        });
+    });
+});
+
 function updateStreak() {
     let streak = parseInt(localStorage.getItem("streak")) || 0;
     let lastCheckIn = localStorage.getItem("lastCheckIn");
@@ -161,18 +197,4 @@ function randomAffirm(results) {
     modal.show(); // Show the modal again with the updated content
 }
 
-   // Event listener for dropdown items
-   document.querySelectorAll('.dropdown-item').forEach(item => {
-    item.addEventListener('click', function(event) {
-        // Get the audio file from data attribute
-        const audioFile = event.target.getAttribute('data-audio');
-        
-        // Set the source for the audio player
-        const audioSource = document.getElementById('audioSource');
-        audioSource.src = audioFile;
 
-        // Get the audio element and play the audio
-        const audioPlayer = document.getElementById('audioPlayer');
-        audioPlayer.load();  // Reloads the audio source
-        audioPlayer.play();  // Plays the audio
-    })});
