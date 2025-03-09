@@ -182,13 +182,6 @@ nav{
     font-size: 20px;
 }
 
-.contents{
-    font-family: "Red Hat Text", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    padding: 20px;
-}
 /* Basic reset for padding and margin */
 * {
     margin: 0;
@@ -277,3 +270,48 @@ div.scroll-container {
   }
 
 
+
+/* Styling for the main wrapper */
+.wrapper {
+text-align: center;
+margin: 20px;
+}
+
+/* Styling for the titles */
+.titles {
+text-align: left;
+}
+
+/* Styling for the scroll container to allow horizontal scrolling */
+.scroll {
+display: flex;
+overflow-x: auto;  /* Allow horizontal scrolling */
+gap: 10px;  /* Space between the images and text */
+padding-bottom: 10px;  /* Padding for the container */
+}
+
+/* Each image wrapper containing text above and below */
+.image-wrapper {
+flex-direction: column;  /* Stack text and image vertically */
+align-items: left;  /* Center the text and image */
+width: 300px;  /* Fixed width for each image wrapper */
+}
+
+/* Styling for the image */
+.image-wrapper img {
+width: 30%;  /* Image takes up full width of the wrapper */
+height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the text above the image */
+.text-top {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.text-bottom {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+}
